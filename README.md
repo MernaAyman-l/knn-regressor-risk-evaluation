@@ -19,5 +19,30 @@ A Jupyter Notebook (`task.ipynb`) implementing a **K-Nearest Neighbors Regressor
 * **Matplotlib & Seaborn** (Confusion Matrix heatmap and ROC curve visualization)
 
 ## How to Run
-1. Open `task.ipynb` in Jupyter Notebook, JupyterLab, or VS Code with a Python environment that includes `scikit-learn`, `matplotlib`, and `seaborn`.
-2. Ensure `x_train`, `y_train`, and `x_test` (and `y_test` for evaluation) are defined/loaded in your workspace, then run the cells in order.
+
+### Requirements
+
+- Python 3.9+
+- Jupyter Notebook or JupyterLab
+- `numpy`, `pandas`, `scikit-learn`, `matplotlib`, and `seaborn`
+
+Install the required packages:
+
+```bash
+python -m pip install numpy pandas scikit-learn matplotlib seaborn jupyter
+```
+
+### Run the notebook
+
+1. Open `task.ipynb` in Jupyter Notebook, JupyterLab, or VS Code.
+2. Run the notebook cells in order **after preparing the input arrays**: `x_train`, `y_train`, `x_test`, and `y_test`.
+
+> **Reproducibility note:** The repository currently contains the notebook only; it does not include the source dataset or the preprocessing steps that create the train/test arrays. Therefore, the notebook is not fully reproducible from a fresh clone until those inputs are supplied. The reported metrics and plots are the saved notebook outputs, not a guarantee that a new run will reproduce the same values.
+
+## Scope & Possible Improvements
+
+- Add the source dataset or link to its public source, subject to its license.
+- Include the preprocessing and train/test split steps so the notebook runs from a clean environment.
+- Document the target variable and explain why the regression output is converted into low/high risk classes.
+- Use a domain-defined risk threshold where possible, rather than deriving it from the test target mean.
+- Add a clear evaluation strategy and avoid using test data to choose the classification threshold.
